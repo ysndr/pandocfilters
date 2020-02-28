@@ -26,7 +26,11 @@ def latexdivs(key, value, format, meta):
                     label = ""
                 else:
                     label = '\\label{' + ident + '}'
-                return([latex('\\begin{' + classes[0] + '}' + label)] + contents +
+                if "options" in kvs:
+                    options = kvs["options"]
+                else
+                    options = ""
+                return([latex('\\begin{' + classes[0] + '}' + options + label)] + contents +
                        [latex('\\end{' + classes[0] + '}')])
 
 if __name__ == "__main__":
