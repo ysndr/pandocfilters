@@ -28,7 +28,7 @@ def latexdivs(key, value, format, meta):
                     label = '\\label{' + ident + '}'
                 if "options" in kvs:
                     options = kvs["options"]
-                else
+                else:
                     options = ""
                 return([latex('\\begin{' + classes[0] + '}' + options + label)] + contents +
                        [latex('\\end{' + classes[0] + '}')])
